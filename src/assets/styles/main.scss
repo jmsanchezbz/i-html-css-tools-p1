@@ -1,0 +1,195 @@
+@import "colours";
+@import "variables";
+
+.container {
+  width: 100%;
+
+  @media (min-width: $tabletMinWidth) {
+    width: 720px;
+  }
+
+  @media (min-width: $desktopMinWidth) {
+    width: 1200px;
+  }
+}
+
+.band-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .box {
+    flex: 1;
+    min-width: 100%;
+    box-sizing: border-box;
+
+    @media (min-width: $tabletMinWidth) {
+      min-width: 50%;
+    }
+  }
+}
+
+.band {
+  .band-hover {
+    display: none;
+  }
+
+  &:hover {
+    .band-default {
+      display: none;
+    }
+
+    .band-hover {
+      display: initial;
+    }
+  }
+}
+
+.ulist {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $tabletMinWidth) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__element {
+    flex-shrink: 0;
+    align-self: center;
+    list-style: none;
+
+    &--active {
+      font-weight: bold;
+      border-bottom: 1px solid white;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
+}
+
+header {
+  background-color: white;
+  border-bottom: 1px lightgray solid;
+  padding: 20px;
+}
+
+.logo {
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+
+  .img-med {
+    display: none;
+  }
+
+  @media (min-width: $tabletMinWidth) {
+    width: 300px;
+    height: auto;
+
+    .img-small {
+      display: none;
+    }
+    .img-med {
+      display: initial;
+    }
+  }
+
+  @media (min-width: $desktopMinWidth) {
+  }
+}
+
+.parent-silhouette {
+  position: relative;
+}
+
+.silhouette {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: -50;
+}
+
+header {
+  .logo {
+    a {
+      border-bottom: initial;
+    }
+  }
+
+  a {
+    color: var(--main-color);
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    padding-bottom: 2px;
+  }
+
+  .ulist__element {
+    &:hover {
+      border-bottom: 1px solid var(--red);
+
+      .silhouette {
+        display: block;
+      }
+
+      @media (min-width: $tabletMinWidth) {
+        .silhouette {
+          left: -20;
+        }
+      }
+    }
+
+    a:hover {
+      color: var(--red);
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 0.5px solid rgb(18, 18, 18);
+
+  a {
+    border-bottom: none;
+
+    &:hover {
+      color: var(--accent-color);
+      border-bottom: 1px dotted var(--accent-color);
+
+      .fa-brands {
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  @media (min-width: $tabletMinWidth) {
+    flex-direction: row;
+    justify-content: space-between;
+    .logo {
+      margin-left: initial;
+      width: 200px;
+    }
+  }
+}
+
+.social-links {
+  .ulist {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  a:hover {
+    border-bottom: initial;
+  }
+}
