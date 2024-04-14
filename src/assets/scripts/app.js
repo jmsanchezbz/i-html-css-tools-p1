@@ -17,7 +17,7 @@ const loadYoutubeSong = (event) => {
 
   const iframe = document.querySelector("iframe.video--fluid");
   const li = event.target.closest("li");
-  const videocode = li.getAttribute('yt-song');
+  const videocode = li.getAttribute('data-info');
 
   iframe.src = yt_link + videocode;
 
