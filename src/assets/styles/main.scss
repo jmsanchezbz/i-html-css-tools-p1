@@ -49,6 +49,10 @@
   }
 }
 
+.band:last-child {
+  margin-bottom: 40px;
+}
+
 .ulist {
   display: flex;
   flex-direction: column;
@@ -212,6 +216,16 @@
   font-size: 0.8rem;
 }
 
+.h-margins {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.v-margins {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .art-detail {
   display: flex;
   flex-direction: column;
@@ -247,16 +261,36 @@
   }
 }
 
-.table-flex {
-  overflow-x: auto;
-}
-
 .songs-list {
   margin: 0 auto;
 }
 
 .artist {
-  display:flex;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tabletMinWidth) {
+    flex-direction: row;
+
+    .artist__item {
+      flex: 1 1 50%; /* Flex-grow, flex-shrink, flex-basis */
+    }
+  }
+
+  @media (min-width: $desktopMinWidth) {
+    .artist-8__item {
+      flex: 0 0 60%;
+    }
+
+    .artist-4__item {
+      flex: 0 0 40%;
+    }
+  }
+}
+
+.table-flex {
+  overflow-x: auto;
 }
 
 table {
@@ -265,16 +299,21 @@ table {
   border-collapse: collapse;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
-  padding-left: 100px;
-  padding-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 20px;
 
   tbody {
     vertical-align: middle;
+    padding-top: 10px;
 
     td {
       text-align: left;
       line-height: 20px;
       padding-bottom: 10px;
+    }
+
+    td:first-child {
+      padding-left: 40px;
     }
   }
 }
