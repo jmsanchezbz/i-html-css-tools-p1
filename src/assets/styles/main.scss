@@ -231,6 +231,13 @@
   flex-direction: column;
   gap: 20px;
 
+  figcaption {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: var(--red);
+    background-color: rgb(255, 255, 255, 0.15);
+  }
+
   @media (min-width: $tabletMinWidth) {
     flex-direction: row;
 
@@ -263,6 +270,13 @@
 
 .songs-list {
   margin: 0 auto;
+}
+
+ol {
+  li {
+    margin-left: 1rem;
+    padding-left: 1rem;
+  }
 }
 
 .artist {
@@ -314,6 +328,75 @@ table {
 
     td:first-child {
       padding-left: 40px;
+    }
+  }
+}
+
+.grid-videos > article {
+  margin-right: 0;
+  margin-bottom: 3rem;
+  margin-left: 0;
+
+  height: 100%;
+  background-color: rgb(10, 10, 10);
+  border: 1px solid rgb(40, 40, 40);
+}
+.grid-videos {
+  @media (min-width: $tabletMinWidth) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @media (min-width: $desktopMinWidth) {
+    article:first-child {
+      grid-column: 1 / span 2;
+    }
+
+    .grid-videos {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.card-content {
+  padding: 15px;
+
+  a.button {
+    display: inline-block;
+    color: black;
+    padding: 10px;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    border-bottom: none;
+
+    &:hover {
+      color: white;
+      background-color: var(--red);
+    }
+  }
+
+  h2 a,
+  h3 a,
+  h4 a {
+    color: white;
+    border-bottom: none;
+
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
+}
+
+a.listen {
+  margin-left: 1rem;
+  border-bottom: none;
+
+  &:hover {
+    border-bottom: none;
+
+    &::after {
+      content: " Listen";
     }
   }
 }
