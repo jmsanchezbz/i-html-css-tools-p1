@@ -3,13 +3,18 @@
 
 .container {
   width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 
   @media (min-width: $tabletMinWidth) {
-    width: 720px;
+    width: 1024px;
   }
 
   @media (min-width: $desktopMinWidth) {
-    width: 1200px;
+    width: 1280px;
   }
 }
 
@@ -60,6 +65,7 @@
     flex-shrink: 0;
     align-self: center;
     list-style: none;
+    margin-bottom: 10px;
 
     &--active {
       font-weight: bold;
@@ -74,7 +80,7 @@
   }
 }
 
-header {
+.header {
   background-color: white;
   border-bottom: 1px lightgray solid;
   padding: 20px;
@@ -118,7 +124,7 @@ header {
   right: -50;
 }
 
-header {
+.header {
   .logo {
     a {
       border-bottom: initial;
@@ -153,7 +159,7 @@ header {
   }
 }
 
-footer {
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,8 +169,8 @@ footer {
     border-bottom: none;
 
     &:hover {
-      color: var(--accent-color);
-      border-bottom: 1px dotted var(--accent-color);
+      color: var(--red);
+      border-bottom: 1px dotted var(--red);
 
       .fa-brands {
         color: var(--accent-color);
@@ -172,9 +178,14 @@ footer {
     }
   }
 
+  .logo {
+    text-align: center;
+  }
+
   @media (min-width: $tabletMinWidth) {
     flex-direction: row;
     justify-content: space-between;
+
     .logo {
       margin-left: initial;
       width: 200px;
@@ -183,6 +194,9 @@ footer {
 }
 
 .social-links {
+  text-align: center;
+  margin-top: auto;
+
   .ulist {
     flex-direction: row;
     justify-content: center;
@@ -191,5 +205,76 @@ footer {
 
   a:hover {
     border-bottom: initial;
+  }
+}
+
+.copy {
+  font-size: 0.8rem;
+}
+
+.art-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tabletMinWidth) {
+    flex-direction: row;
+
+    .art-detail__item {
+      flex: 1 1 50%; /* Flex-grow, flex-shrink, flex-basis */
+    }
+  }
+
+  @media (min-width: $desktopMinWidth) {
+    .art-detail-8__item {
+      flex: 1 1 60%; /* Flex-grow, flex-shrink, flex-basis */
+    }
+    .art-detail-4__item {
+      flex: 1 1 40%; /* Flex-grow, flex-shrink, flex-basis */
+    }
+  }
+}
+
+.description {
+  text-align: justify;
+}
+
+.olist {
+  text-align: justify;
+
+  li {
+    padding-bottom: 10px;
+  }
+}
+
+.table-flex {
+  overflow-x: auto;
+}
+
+.songs-list {
+  margin: 0 auto;
+}
+
+.artist {
+  display:flex;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding-left: 100px;
+  padding-top: 10px;
+
+  tbody {
+    vertical-align: middle;
+
+    td {
+      text-align: left;
+      line-height: 20px;
+      padding-bottom: 10px;
+    }
   }
 }
