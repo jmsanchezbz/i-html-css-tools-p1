@@ -4,11 +4,11 @@ console.log(`Hello ${name}`);
 
 window.applyActiveClassToMenuElement = applyActiveClassToMenuElement
 
-export function applyActiveClassToMenuElement(href) {
+export function applyActiveClassToMenuElement(name) {
   const menuLinks = document.querySelectorAll(".menu .ulist__link");
 
   menuLinks.forEach((e) => {
-    if (e.getAttribute("href").includes(href)) {
+    if (e.getAttribute("data-info").includes(name)) {
       e.parentNode.classList.add("ulist__element--active");
       return;
     }
