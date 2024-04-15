@@ -1,9 +1,6 @@
 const name = "Queen";
 console.log(`Hello ${name}`);
 
-module.exports = {
-  scopeHoist: false,
-};
 
 window.applyActiveClassToMenuElement = applyActiveClassToMenuElement
 
