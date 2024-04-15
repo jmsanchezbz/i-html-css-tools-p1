@@ -173,7 +173,9 @@
     </main>
     <include src="./views/footer.html"></include>
     <script>
-        applyActiveClassToMenuElement('presentation.html');
+        document.addEventListener('DOMContentLoaded', () => {
+            applyActiveClassToMenuElement('presentation.html');
+        })
     </script>
 </body>
 

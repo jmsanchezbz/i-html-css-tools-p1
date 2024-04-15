@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Queen's Fan Club</title>
     <include src="./views/head.html"></include>
-    <script src="./assets/scripts/app.js"></script>
 </head>
 
 <body>
@@ -38,7 +37,10 @@
     </main>
     <include src="./views/footer.html"></include>
     <script>
-        applyActiveClassToMenuElement('index.html');
+        document.addEventListener('DOMContentLoaded', () => {
+            applyActiveClassToMenuElement('index.html');
+            //window.applyActiveClassToMenuElement('index.html');
+        })
     </script>
 </body>
 

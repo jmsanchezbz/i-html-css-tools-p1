@@ -1,7 +1,13 @@
 const name = "Queen";
 console.log(`Hello ${name}`);
 
-const applyActiveClassToMenuElement = (href) => {
+module.exports = {
+  scopeHoist: false,
+};
+
+window.applyActiveClassToMenuElement = applyActiveClassToMenuElement
+
+export function applyActiveClassToMenuElement(href) {
   const menuLinks = document.querySelectorAll(".menu .ulist__link");
 
   menuLinks.forEach((e) => {
@@ -12,20 +18,21 @@ const applyActiveClassToMenuElement = (href) => {
   });
 };
 
-const loadYoutubeSong = (event) => {
+export function loadYoutubeSong(event) {
   const yt_link = "https://www.youtube-nocookie.com/embed/";
 
   const iframe = document.querySelector("iframe.video--fluid");
   const li = event.target.closest("li");
-  const videocode = li.getAttribute('data-info');
+  const videocode = li.getAttribute("data-info");
 
   iframe.src = yt_link + videocode;
-
 };
 
-const addListenersToSongs = () => {
+export function addListenersToSongs() {
   const lis = document.querySelectorAll(".songs-list ol>li>a");
   lis.forEach((e) => {
     e.addEventListener("click", loadYoutubeSong);
   });
 };
+
+window.addListenersToSongs = addListenersToSongs

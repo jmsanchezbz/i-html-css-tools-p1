@@ -20,7 +20,7 @@
                             alt="Album A kind of magic">
                         <figcaption>Album Cover - A Kind of Magic - 1986</figcaption>
                     </figure>
-                    <div class="art-detail__item art-detail-8__item">
+                    <div class="art-detail__item art-detail-8__item h-margins">
                         <p class="description"><strong>A Kind of Magic</strong> is the twelfth studio album by the
                             British rock band Queen,
                             released on 2 June 1986 by <a href="https://en.wikipedia.org/wiki/EMI_Records"
@@ -96,8 +96,10 @@
     </main>
     <include src="./views/footer.html"></include>
     <script>
-        applyActiveClassToMenuElement('detail.html');
-        addListenersToSongs();
+        document.addEventListener('DOMContentLoaded', () => {
+            applyActiveClassToMenuElement('detail.html');
+            window.addListenersToSongs();
+        })
     </script>
 </body>
 

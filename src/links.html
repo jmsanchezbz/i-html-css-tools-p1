@@ -30,6 +30,12 @@
                     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout" target="_blank">mdn
                         - Grid</a>
                 </li>
+                <li class="ulist__element">
+                    <a href="https://parceljs.org/" target="_blank">Parcel</a>
+                </li>
+                <li class="ulist__element">
+                    <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+                </li>
             </ul>
             <h2>Validators</h2>
             <ul class="ulist">
@@ -51,7 +57,9 @@
     </main>
     <include src="./views/footer.html"></include>
     <script>
-        applyActiveClassToMenuElement('links.html');
+        document.addEventListener('DOMContentLoaded', () => {
+            applyActiveClassToMenuElement('links.html');
+        })
     </script>
 </body>
 
