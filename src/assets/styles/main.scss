@@ -60,7 +60,6 @@
   margin: 0;
 
   @media (min-width: $tabletMinWidth) {
-    flex-direction: row;
     justify-content: center;
     gap: 10px;
   }
@@ -69,7 +68,7 @@
     flex-shrink: 0;
     align-self: center;
     list-style: none;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 
     &--active {
       font-weight: bold;
@@ -142,23 +141,29 @@
     padding-bottom: 2px;
   }
 
-  .ulist__element {
-    &:hover {
-      border-bottom: 1px solid var(--red);
+  a:hover {
+    color: var(--red);
+  }
 
-      .silhouette {
-        display: block;
-      }
+  .ulist {
+    .ulist__element {
+      &:hover {
+        border-bottom: 1px solid var(--red);
 
-      @media (min-width: $tabletMinWidth) {
         .silhouette {
-          left: -20;
+          display: block;
+        }
+
+        @media (min-width: $tabletMinWidth) {
+          .silhouette {
+            left: -20;
+          }
         }
       }
     }
 
-    a:hover {
-      color: var(--red);
+    @media (min-width: $tabletMinWidth) {
+      flex-direction: row;
     }
   }
 }
@@ -221,6 +226,7 @@
 
 .copy {
   font-size: 0.8rem;
+  text-align: center;
 }
 
 .h-margins {
@@ -264,15 +270,19 @@
 }
 
 .description {
-  text-align: justify;
+  text-align: left;
 }
 
 .olist {
-  text-align: justify;
+  text-align: left;
 
   li {
-    padding-bottom: 10px;
+    padding-bottom: 1rem;
   }
+}
+
+.mb {
+  margin-bottom: 1rem;
 }
 
 .info {
