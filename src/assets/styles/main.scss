@@ -224,6 +224,10 @@
   }
 }
 
+.center {
+  text-align: center;
+}
+
 .copy {
   font-size: 0.8rem;
   text-align: center;
@@ -348,13 +352,21 @@ table {
     vertical-align: middle;
     padding-top: 10px;
 
+    tr:first-child {
+      th,
+      td {
+        padding-top: 10px;
+      }
+    }
+
+    th,
     td {
       text-align: left;
       line-height: 20px;
       padding-bottom: 10px;
     }
 
-    td:first-child {
+    th {
       padding-left: 40px;
     }
   }
@@ -427,4 +439,10 @@ a.listen {
       content: " Listen";
     }
   }
+}
+
+.ulist-albums {
+  @extend .ulist;
+  flex-direction: row;
+  gap: 1rem;
 }
