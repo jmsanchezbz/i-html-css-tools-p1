@@ -443,6 +443,43 @@ a.listen {
 
 .ulist-albums {
   @extend .ulist;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+
+  .ulist__element {
+    width: 150px;
+    height: 230px;
+    margin-bottom: 0px;
+  }
+
+  figure {
+    border: 1px solid #282828;
+    margin-bottom: 0px;
+
+    &:hover {
+      border: 1px solid var(--accent-color);
+      color: var(--red);
+    }
+
+    figcaption {
+      color: white;
+      padding-right: 5px;
+      padding-left: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 1.1rem;
+
+      div {
+        font-size: 1rem;
+        color: grey;
+      }
+    }
+  }
+
+  @media (min-width: $tabletMinWidth) {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+  }
 }
