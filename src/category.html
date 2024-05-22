@@ -11,6 +11,15 @@
     <include src="./views/header.html"></include>
     <main>
         <h1>Best Albums</h1>
+        <figure style="margin-bottom:3rem">
+            <picture>
+                <source media="(max-width: 1023px)" srcset="./assets/images/queen-best-live-performances-art.jpg?as=avif&width=1024"
+                    type="image/avif">
+                <source media="(min-width: 1024px)" srcset="./assets/images/queen-best-live-performances.jpg?as=avif"
+                    type="image/avif">
+                <img class="image--fluid" src="./assets/images/queen-best-live-performances.jpg" alt="Queen in Concert" />
+            </picture>
+        </figure>
         <div class="container grid-videos">
             <article>
                 <figure>

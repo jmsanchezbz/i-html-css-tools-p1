@@ -18,6 +18,23 @@
   }
 }
 
+.centered-image-container {
+  position: relative;
+
+  .centered-image {
+    visibility: hidden;
+    width: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-125px, -125px);
+    
+    @media (min-width: $tabletMinWidth) {
+      visibility: visible;
+    }
+  }
+}
+
 .band-container {
   display: flex;
   flex-wrap: wrap;
@@ -87,26 +104,44 @@
   background-color: white;
   border-bottom: 1px lightgray solid;
   padding: 20px;
+  color: black;
+}
+
+.queen-font {
+  font-size: 3rem;
+}
+
+.queen-letter {
+  font-size: 1.5em;
+}
+
+header {
+  .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    @media (min-width: $tabletMinWidth) {
+      flex-direction: row;
+    }
+  }
 }
 
 .logo {
+  font-family: var(--logo-serif-font);
+  font-weight: 400;
   width: 200px;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-right: auto;
   margin-left: auto;
 
-  .img-med {
-    display: none;
-  }
-
   @media (min-width: $tabletMinWidth) {
-    width: 300px;
+    flex-direction: row;
+    width: 150px;
     height: auto;
 
-    .img-small {
-      display: none;
-    }
     .img-med {
       display: initial;
     }
@@ -381,6 +416,7 @@ table {
   background-color: rgb(10, 10, 10);
   border: 1px solid rgb(40, 40, 40);
 }
+
 .grid-videos {
   @media (min-width: $tabletMinWidth) {
     display: grid;
@@ -483,3 +519,64 @@ a.listen {
     flex-shrink: 1;
   }
 }
+
+.img-silhouette {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes horizontal-rotation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.rotate-image {
+  display: inline-block; /* Ensure the container takes only as much space as needed */
+  animation: 6s ease-in-out infinite horizontal-rotation;
+}
+
+.clip-polygon-left {
+  clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 30% 100%);
+}
+
+.clip-polygon-right {
+  clip-path: polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+}
+
+.clip-polygon-freddy {
+  @extend .clip-polygon-left;
+
+  @media (min-width: $tabletMinWidth) {
+    clip-path: polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
+  }
+}
+
+.clip-polygon-bryan {
+  @extend .clip-polygon-right;
+
+  @media (min-width: $tabletMinWidth) {
+    clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 30% 100%);
+  }
+}
+
+/*
+.rotate-flip-image {
+  animation: rotate-flip 5s infinite linear;
+}
+
+@keyframes rotate-flip {
+  from {
+    transform: rotate(0deg) scaleX(1);
+  }
+  to {
+    transform: rotate(180deg) scaleX(-1);
+  }
+}
+*/

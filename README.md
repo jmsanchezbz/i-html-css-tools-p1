@@ -1,2 +1,3 @@
 # Herramientas HTML y CSS
-## Práctica P1
+## Práctica P2
+Web y recursos multimedia
