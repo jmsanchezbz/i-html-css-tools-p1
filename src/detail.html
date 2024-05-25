@@ -16,8 +16,14 @@
                 <h2>The story behind</h2>
                 <div class="art-detail">
                     <figure class="art-detail__item art-detail-4__item">
-                        <img class="image--fluid" src="./assets/images/Queen_A_Kind_Of_Magic.png"
-                            alt="Album A kind of magic">
+                        <picture>
+                            <source media="(min-width: 1024px)"
+                                srcset="./assets/images/Queen_A_Kind_Of_Magic.png?width=1024" type="image/png">
+                            <source media="(max-width: 1023px)"
+                                srcset="./assets/images/Queen_A_Kind_Of_Magic-art.png?width=512" type="image/png">
+                            <img class="image--fluid" src="./assets/images/Queen_A_Kind_Of_Magic.png"
+                                alt="Cover album kink of magic" />
+                        </picture>
                         <figcaption>Album Cover - A Kind of Magic - 1986</figcaption>
                     </figure>
                     <div class="art-detail__item art-detail-8__item h-margins">
@@ -56,10 +62,17 @@
                             due to his diagnosis with AIDS the following year.</p>
                     </div>
                 </div>
+                <div>
+                    <img class="image--fluid" srcset="./assets/images/a-kind-of-magic-de-queen.jpg?as=jpeg&width=1240 1240w,
+        ./assets/images/a-kind-of-magic-de-queen.jpg?as=jpeg&width=1024 1024w"
+                        sizes="(max-width: 1024px) 1024px, 1240px" src="./assets/images/a-kind-of-magic-de-queen.jpg"
+                        alt="Album A kind of magic">
+                </div>
             </section>
             <section class="article">
                 <h2>Songs</h2>
-                <div class="info">Select a song! <br><br><i class="fa-solid fa-2x fa-headphones-simple"></i></div>
+                <div class="info">Select a song! <br><br><i class="fa-solid fa-2x fa-headphones-simple shake-image"></i>
+                </div>
                 <div class="art-detail">
                     <figure class="art-detail__item">
                         <iframe class="video--fluid" src="https://www.youtube-nocookie.com/embed/"
@@ -98,7 +111,7 @@
                     <li class="ulist__element">
                         <a href="#">
                             <figure>
-                                <img class="image--fluid" src="./assets/images/album-a-day-at-the-races.jpeg"
+                                <img class="image--fluid" src="./assets/images/album-a-day-at-the-races.jpeg?width=148"
                                     alt="Album A Day At the Races cover">
                                 <figcaption>A Day At the Races <div>1976</div>
                                 </figcaption>
@@ -108,7 +121,7 @@
                     <li class="ulist__element">
                         <a href="#">
                             <figure>
-                                <img class="image--fluid" src="./assets/images/album-a-night-at.jpeg"
+                                <img class="image--fluid" src="./assets/images/album-a-night-at.jpeg?width=148"
                                     alt="A Night at the Opera cover">
                                 <figcaption>A Night at the Opera<div>1975</div>
                                 </figcaption>
@@ -118,7 +131,7 @@
                     <li class="ulist__element">
                         <a href="#">
                             <figure>
-                                <img class="image--fluid" src="./assets/images/album-news-of-the-world.jpeg"
+                                <img class="image--fluid" src="./assets/images/album-news-of-the-world.jpeg?width=148"
                                     alt="News of the World cover">
                                 <figcaption>News of the World<div>1977</div>
                                 </figcaption>
@@ -128,6 +141,16 @@
                 </ul>
             </section>
         </div>
+
+        <picture>
+            <source media="(min-width: 1024px)" srcset="./assets/images/queen_group_transbkg.png?as=png&width=1024 1024w"
+                                type="image/png">
+            <source media="(max-width: 1023px and min-width: 512px)" srcset="./assets/images/queen_group_transbkg.png?as=png&width=1024 1024w"
+                                type="image/png">
+            <source media="(max-width: 511px)" srcset="./assets/images/queen_group_transbkg.png?as=png&width=512 512w"
+                                type="image/png">
+            <img class="image--fluid" src="./assets/images/queen_group_transbkg.png" alt="About Queen">
+        </picture>
     </main>
     <include src="./views/footer.html"></include>
     <script>

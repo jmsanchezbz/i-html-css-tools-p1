@@ -1,8 +1,7 @@
 const name = "Queen";
 console.log(`Hello ${name}`);
 
-
-window.applyActiveClassToMenuElement = applyActiveClassToMenuElement
+window.applyActiveClassToMenuElement = applyActiveClassToMenuElement;
 
 export function applyActiveClassToMenuElement(name) {
   const menuLinks = document.querySelectorAll(".menu .ulist__link");
@@ -13,7 +12,7 @@ export function applyActiveClassToMenuElement(name) {
       return;
     }
   });
-};
+}
 
 export function loadYoutubeSong(event) {
   const yt_link = "https://www.youtube-nocookie.com/embed/";
@@ -23,13 +22,24 @@ export function loadYoutubeSong(event) {
   const videocode = li.getAttribute("data-info");
 
   iframe.src = yt_link + videocode;
-};
+}
 
 export function addListenersToSongs() {
   const lis = document.querySelectorAll(".songs-list ol>li>a");
   lis.forEach((e) => {
     e.addEventListener("click", loadYoutubeSong);
   });
-};
+}
 
-window.addListenersToSongs = addListenersToSongs
+window.addListenersToSongs = addListenersToSongs;
+
+export function restartAnimation() {
+  const svgElement = document.querySelector("#svgLetters");
+
+  const parent = svgElement.parentElement;
+  parent.replaceChild(svgElement, svgElement);
+}
+
+window.restartAnimation = restartAnimation;
+
+setInterval(restartAnimation, 8000);
