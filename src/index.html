@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Queen's Fan Club</title>
+    <title>Queen's Fan Club - Home</title>
     <include src="./views/head.html"></include>
 </head>
 
@@ -12,8 +12,8 @@
     <include src="./views/header.html"></include>
     <main>
         <h1>Queen's Fan Club</h1>
-        <div class="band">
-            <div class="band-default">
+        <div class="band" role="group">
+            <div class="band-default" role="img" aria-label="Queen Band with Adam">
                 <picture>
                     <source media="(max-width: 1023px)" srcset="./assets/images/queen+adam-art.jpg?as=avif&width=1024"
                         type="image/avif">
@@ -22,7 +22,7 @@
                     <img class="image--fluid" src="./assets/images/queen+adam.jpg" width="1024" alt="Queen band + Adam" />
                 </picture>
             </div>
-            <div class="band-hover">
+            <div class="band-hover" role="img" aria-label="Original Queen Band">
                 <picture>
                     <source media="(max-width: 1023px)" srcset="./assets/images/queen-group1-art.jpg?as=avif&width=1024"
                         type="image/avif">
@@ -32,13 +32,13 @@
                 </picture>
             </div>
         </div>
-        <div>
-            <div class="centered-image-container">
-                <div class="centered-image">
+        <div role="members">
+            <div class="centered-image-container" aria-hidden="true">
+                <div class="centered-image" role="img" aria-label="Logo Queen">
                     <img class="image--fluid fade-in" src="./assets/images/logo-dark-bkg.svg" alt="Logo Queen">
                 </div>
                 <div class="band-container">
-                    <div class="box">
+                    <div class="box" role="img" aria-label="Freddie Mercury">
                         <picture>
                             <source media="(min-width: 2048px)" srcset="./assets/images/freddie.jpg?as=jpg&width=1024 1024w" type="image/jpg">
                             <source media="(min-width: 1024px)" srcset="./assets/images/freddie.jpg?as=jpg&width=1024 1024w" type="image/jpg">
@@ -47,7 +47,7 @@
                                 alt="Freddy Mercury">
                         </picture>
                     </div>
-                    <div class="box">
+                    <div class="box" role="img" aria-label="Brian May">
                         <picture>
                             <source media="(min-width: 2048px)" srcset="./assets/images/brian.jpg?as=jpg&width=1024 1024w" type="image/jpg">
                             <source media="(min-width: 1024px)" srcset="./assets/images/brian.jpg?as=jpg&width=1024 1024w" type="image/jpg">
@@ -56,7 +56,7 @@
                                 alt="Brian May">
                         </picture>
                     </div>
-                    <div class="box">
+                    <div class="box" role="img" aria-label="John Deacon">
                         <picture>
                             <source media="(min-width: 2048px)" srcset="./assets/images/john.jpg?as=jpg&width=1024 1024w" type="image/jpg">
                             <source media="(min-width: 1024px)" srcset="./assets/images/john.jpg?as=jpg&width=1024 1024w" type="image/jpg">
@@ -65,7 +65,7 @@
                                 alt="John Deacon">
                         </picture>
                     </div>
-                    <div class="box">
+                    <div class="box" role="img" aria-label="Roger Taylor">
                         <picture>
                             <source media="(min-width: 2048px)" srcset="./assets/images/roger.jpg?as=jpg&width=1024 1024w" type="image/jpg">
                             <source media="(min-width: 1024px)" srcset="./assets/images/roger.jpg?as=jpg&width=1024 1024w" type="image/jpg">
