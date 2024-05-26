@@ -34,10 +34,12 @@ export function addListenersToSongs() {
 window.addListenersToSongs = addListenersToSongs;
 
 export function restartAnimation() {
-  const svgElement = document.querySelector("#svgLetters");
+  const div = document.querySelector("#svgLetters");
 
-  const parent = svgElement.parentElement;
-  parent.replaceChild(svgElement, svgElement);
+  if (div) {
+    const svgElement = div.querySelector('svg');
+    div.replaceChild(svgElement, svgElement);
+  }
 }
 
 window.restartAnimation = restartAnimation;
