@@ -21,7 +21,7 @@
                                 srcset="./assets/images/Queen_A_Kind_Of_Magic.png?width=1024" type="image/png">
                             <source media="(max-width: 1023px)"
                                 srcset="./assets/images/Queen_A_Kind_Of_Magic-art.png?width=512" type="image/png">
-                            <img class="image--fluid" src="./assets/images/Queen_A_Kind_Of_Magic.png"
+                            <img class="image--fluid" src="./assets/images/Queen_A_Kind_Of_Magic.png" loading="lazy"
                                 alt="Cover album kink of magic" />
                         </picture>
                         <figcaption>Album Cover - A Kind of Magic - 1986</figcaption>
@@ -66,7 +66,7 @@
                     <img class="image--fluid" srcset="./assets/images/a-kind-of-magic-de-queen.jpg?as=jpeg&width=1240 1240w,
         ./assets/images/a-kind-of-magic-de-queen.jpg?as=jpeg&width=1024 1024w"
                         sizes="(max-width: 1024px) 1024px, 1240px" src="./assets/images/a-kind-of-magic-de-queen.jpg"
-                        alt="Album A kind of magic">
+                        loading="lazy" alt="Album A kind of magic">
                 </div>
             </section>
             <section class="article">
@@ -76,6 +76,7 @@
                 <div class="art-detail">
                     <figure class="art-detail__item">
                         <iframe class="video--fluid" src="https://www.youtube-nocookie.com/embed/"
+                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/Y8Wp3dafaMQ?autoplay=1><span>▶</span></a>"
                             title="YouTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -83,24 +84,33 @@
                     <div class="songs-list art-detail__item">
                         <h4>Album songs</h4>
                         <ol class="olist">
-                            <li data-info="0_1IMZmJe-U"><strong>One Vision</strong> (5:12) <a aria-label="Video canción queen One Vision" class="listen"><i
+                            <li data-info="0_1IMZmJe-U"><strong>One Vision</strong> (5:12) <a
+                                    aria-label="Video canción queen One Vision" class="listen"><i
                                         class="fa-solid fa-headphones-simple"></i> Song</a></li>
-                            <li data-info="0p_1QSUsbsM"><strong>A Kind Of Magic</strong> (4:30) <a aria-label="Video canción queen A kind of magic" class="listen"><i
+                            <li data-info="0p_1QSUsbsM"><strong>A Kind Of Magic</strong> (4:30) <a
+                                    aria-label="Video canción queen A kind of magic" class="listen"><i
                                         class="fa-solid fa-headphones-simple"></i> Song</a></li>
-                            <li data-info="Cgib8QoBKHE"><strong>One Year of Love</strong> (4:40) <a aria-label="Video canción queen One Year of Love" class="listen"><i
+                            <li data-info="Cgib8QoBKHE"><strong>One Year of Love</strong> (4:40) <a
+                                    aria-label="Video canción queen One Year of Love" class="listen"><i
                                         class="fa-solid fa-headphones-simple"></i> Song</a></li>
-                            <li data-info="L2W2mU8R7-A"><strong>Pain is So Close To Pleasure</strong> (4:10) <a aria-label="Video canción queen Pain is so close to pleasure"
-                                    class="listen"><i class="fa-solid fa-headphones-simple"></i> Song</a></li>
-                            <li data-info="0AIlz08fZos"><strong>Friends Will Be Friends</strong> (4:10) <a aria-label="Video canción queen Friends will be friends"
-                                    class="listen"><i class="fa-solid fa-headphones-simple"></i> Song</a></li>
-                            <li data-info="_Jtpf8N5IDE"><strong>Who Wants To Live Forever</strong> (5:20) <a aria-label="Video canción queen Who wants to live forever"
-                                    class="listen"><i class="fa-solid fa-headphones-simple"></i> Song</a></li>
-                            <li data-info="vf4UhPuwoGE"><strong>Gimme The Prize</strong> (Kurgan's Theme) (4:35) <a aria-label="Video canción queen Gimme the prize"
-                                    class="listen"><i class="fa-solid fa-headphones-simple"></i> Song</a></li>
-                            <li data-info="ecrheD1eYYU"><strong>Don't Lose Your Head</strong> (4:40) <a aria-label="Video canción queen Don't lose your head"
-                                    class="listen"><i class="fa-solid fa-headphones-simple"></i> Song</a></li>
-                            <li data-info="VEJ8lpCQbyw"><strong>Princes Of The Universe</strong> (3:34) <a aria-label="Video canción queen Princes of the universe"
-                                    class="listen"><i class="fa-solid fa-headphones-simple"></i> Song</a></li>
+                            <li data-info="L2W2mU8R7-A"><strong>Pain is So Close To Pleasure</strong> (4:10) <a
+                                    aria-label="Video canción queen Pain is so close to pleasure" class="listen"><i
+                                        class="fa-solid fa-headphones-simple"></i> Song</a></li>
+                            <li data-info="0AIlz08fZos"><strong>Friends Will Be Friends</strong> (4:10) <a
+                                    aria-label="Video canción queen Friends will be friends" class="listen"><i
+                                        class="fa-solid fa-headphones-simple"></i> Song</a></li>
+                            <li data-info="_Jtpf8N5IDE"><strong>Who Wants To Live Forever</strong> (5:20) <a
+                                    aria-label="Video canción queen Who wants to live forever" class="listen"><i
+                                        class="fa-solid fa-headphones-simple"></i> Song</a></li>
+                            <li data-info="vf4UhPuwoGE"><strong>Gimme The Prize</strong> (Kurgan's Theme) (4:35) <a
+                                    aria-label="Video canción queen Gimme the prize" class="listen"><i
+                                        class="fa-solid fa-headphones-simple"></i> Song</a></li>
+                            <li data-info="ecrheD1eYYU"><strong>Don't Lose Your Head</strong> (4:40) <a
+                                    aria-label="Video canción queen Don't lose your head" class="listen"><i
+                                        class="fa-solid fa-headphones-simple"></i> Song</a></li>
+                            <li data-info="VEJ8lpCQbyw"><strong>Princes Of The Universe</strong> (3:34) <a
+                                    aria-label="Video canción queen Princes of the universe" class="listen"><i
+                                        class="fa-solid fa-headphones-simple"></i> Song</a></li>
                         </ol>
                     </div>
                 </div>
@@ -112,7 +122,7 @@
                         <a href="#">
                             <figure>
                                 <img class="image--fluid" src="./assets/images/album-a-day-at-the-races.jpeg?width=148"
-                                    alt="Album A Day At the Races cover">
+                                    loading="lazy" alt="Album A Day At the Races cover">
                                 <figcaption>A Day At the Races <div>1976</div>
                                 </figcaption>
                             </figure>
@@ -122,7 +132,7 @@
                         <a href="#">
                             <figure>
                                 <img class="image--fluid" src="./assets/images/album-a-night-at.jpeg?width=148"
-                                    alt="A Night at the Opera cover">
+                                    loading="lazy" alt="A Night at the Opera cover">
                                 <figcaption>A Night at the Opera<div>1975</div>
                                 </figcaption>
                             </figure>
@@ -132,7 +142,7 @@
                         <a href="#">
                             <figure>
                                 <img class="image--fluid" src="./assets/images/album-news-of-the-world.jpeg?width=148"
-                                    alt="News of the World cover">
+                                    loading="lazy" alt="News of the World cover">
                                 <figcaption>News of the World<div>1977</div>
                                 </figcaption>
                             </figure>
@@ -143,13 +153,13 @@
         </div>
 
         <picture>
-            <source media="(min-width: 1024px)" srcset="./assets/images/queen_group_transbkg.png?as=png&width=1024 1024w"
-                                type="image/png">
-            <source media="(max-width: 1023px and min-width: 512px)" srcset="./assets/images/queen_group_transbkg.png?as=png&width=1024 1024w"
-                                type="image/png">
+            <source media="(min-width: 1024px)"
+                srcset="./assets/images/queen_group_transbkg.png?as=png&width=1024 1024w" type="image/png">
+            <source media="(max-width: 1023px and min-width: 512px)"
+                srcset="./assets/images/queen_group_transbkg.png?as=png&width=1024 1024w" type="image/png">
             <source media="(max-width: 511px)" srcset="./assets/images/queen_group_transbkg.png?as=png&width=512 512w"
-                                type="image/png">
-            <img class="image--fluid" src="./assets/images/queen_group_transbkg.png" alt="About Queen">
+                type="image/png">
+            <img class="image--fluid" src="./assets/images/queen_group_transbkg.png" loading="lazy" alt="About Queen">
         </picture>
     </main>
     <include src="./views/footer.html"></include>

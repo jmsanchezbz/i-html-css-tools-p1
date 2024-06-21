@@ -1,6 +1,15 @@
 const name = "Queen";
 console.log(`Hello ${name}`);
 
+//-- init web-vitals
+import {onLCP, onINP, onCLS} from 'web-vitals';
+
+onCLS(console.log);
+onINP(console.log);
+onLCP(console.log);
+
+//-- end web-vitals
+
 window.applyActiveClassToMenuElement = applyActiveClassToMenuElement;
 
 export function applyActiveClassToMenuElement(name) {
