@@ -1,10 +1,77 @@
 @import "main.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Noto+Serif:ital,wght@0,600;1,600&display=swap");
-
-
 @import "npm:@fortawesome/fontawesome-free/css/all.css";
+
+@font-face {
+  font-family: 'Lusitana';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Lusitana/Lusitana-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lusitana';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Lusitana/Lusitana-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lusitana';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/Lusitana/Lusitana-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Noto_Serif/static/NotoSerif-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Lato/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/Lato/Lato-Bold.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../fonts/Lato/Lato-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: url('../fonts/Lato/Lato-BlackItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 900;
+  src: url('../fonts/Lato/Lato-BlackItalic.ttf') format('truetype');
+}
 
 :root {
   --font-family-sans-serif: "Lato", sans-serif;
