@@ -2,7 +2,7 @@ const name = "Queen";
 console.log(`Hello ${name}`);
 
 //-- init web-vitals
-import {onLCP, onINP, onCLS} from 'web-vitals';
+import { onLCP, onINP, onCLS } from "web-vitals";
 
 onCLS(console.log);
 onINP(console.log);
@@ -24,13 +24,22 @@ export function applyActiveClassToMenuElement(name) {
 }
 
 export function loadYoutubeSong(event) {
-  const yt_link = "https://www.youtube-nocookie.com/embed/";
+  const ytlink = "https://www.youtube-nocookie.com/embed/#yt-code#?autoplay=1";
 
   const iframe = document.querySelector("iframe.video--fluid");
   const li = event.target.closest("li");
   const videocode = li.getAttribute("data-info");
 
-  iframe.src = yt_link + videocode;
+  const href_wildcard = "#href#";
+  const ytcode_wildcard = "#yt-code#";
+
+  console.log("----->iframe-->", iframe.srcdoc);
+  iframe.src = ytlink.replace(ytcode_wildcard, videocode);
+
+  iframe.removeAttribute('srcdoc');
+  console.log("----->iframe-->", iframe.srcdoc);
+
+  console.log("---->loadYoutubeSong", iframe, li, videocode);
 }
 
 export function addListenersToSongs() {
@@ -40,13 +49,14 @@ export function addListenersToSongs() {
   });
 }
 
+window.loadYoutubeSong = loadYoutubeSong;
 window.addListenersToSongs = addListenersToSongs;
 
 export function restartAnimation() {
   const div = document.querySelector("#svgLetters");
 
   if (div) {
-    const svgElement = div.querySelector('svg');
+    const svgElement = div.querySelector("svg");
     div.replaceChild(svgElement, svgElement);
   }
 }
