@@ -469,12 +469,27 @@ table {
   }
 }
 
-a.listen {
+.text-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button.listen {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  border-bottom: 1px var(--accent-color) dotted;
+
   margin-left: 1rem;
   border-bottom: none;
 
   &:hover {
-    border-bottom: none;
+    color: var(--red);
 
     &::after {
       content: " Listen";

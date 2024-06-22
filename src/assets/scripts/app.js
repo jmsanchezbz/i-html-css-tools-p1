@@ -34,7 +34,7 @@ export function loadYoutubeSong(event) {
 }
 
 export function addListenersToSongs() {
-  const lis = document.querySelectorAll(".songs-list ol>li>a");
+  const lis = document.querySelectorAll(".songs-list ol>li>button");
   lis.forEach((e) => {
     e.addEventListener("click", loadYoutubeSong);
   });
